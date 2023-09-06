@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">XSS</h1>
+    <p>1.編碼避免 2.限制cookie存取</p>
+    @Html.Raw(@ViewBag.html)
+    <hr />
+    @ViewBag.html
+    <hr />
+    @ViewBag.js
+    <hr />
+    @ViewBag.url
+    <hr />
+
+</div>
