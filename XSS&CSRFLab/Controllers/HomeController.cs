@@ -38,6 +38,15 @@ namespace XSS_CSRFLab.Controllers
         {
             return View();
         }
+        
+        // 改用全域設定
+        //[ValidateAntiForgeryToken]
+        [HttpPost]
+        public void Privacy(string name)
+        {
+            var resp = name + " From server";
+            
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

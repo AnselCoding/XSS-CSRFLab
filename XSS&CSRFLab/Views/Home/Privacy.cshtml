@@ -3,4 +3,13 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<h1>MVC or Razor CSRF</h1>
+<form method="post">
+    @* @Html.AntiForgeryToken() *@
+    <!-- 錯誤的 token 會得到 Http 400 的回覆 -->
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ....UZA">
+    <!-- 其他表單字段 -->
+    <input type="text" id="name2" name="name" required minlength="4" maxlength="8" size="10" />
+    <button type="submit">提交</button>
+</form>
+
